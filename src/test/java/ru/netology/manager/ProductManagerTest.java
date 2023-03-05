@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ProductManagerTest {
     ProductRepository repository = new ProductRepository();
     ProductManager manager = new ProductManager(repository);
-    Product book = new Book(1, "Инструкция iPhone", 100, "Автор");
+    Product book = new Book(1, "Властелин Колец", 100, "Токиен");
     Product smartphone = new Smartphone(2, "iPhone", 50_000, "Производитель");
-    Product product = new Product(3, "Кофе", 1_000);
+    Product product = new Product(3, "Чай", 1_000);
 
     @Test
     void shouldAdd() {
@@ -38,7 +38,7 @@ public class ProductManagerTest {
         manager.add(book);
         manager.add(smartphone);
         manager.add(product);
-        String name = "Инструкция";
+        String name = "Властелин Колец";
         Product[] expected = {book};
         Product[] actual = manager.searchBy(name);
         assertArrayEquals(expected, actual);

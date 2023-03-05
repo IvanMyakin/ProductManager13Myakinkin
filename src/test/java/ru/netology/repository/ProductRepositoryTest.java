@@ -7,9 +7,9 @@ import ru.netology.domain.Smartphone;
 import static org.junit.jupiter.api.Assertions.*;
 public class ProductRepositoryTest {
     private ProductRepository repository = new ProductRepository();
-    Product book = new Book(1, "Инструкция iPhone", 100, "Автор");
+    Product book = new Book(1, "Властелин колец", 100, "Толкиен");
     Product smartphone = new Smartphone(2, "iPhone", 50_000, "Производитель");
-    Product product = new Product(3, "Кофе", 1_000);
+    Product product = new Product(3, "Чай", 1_000);
     @Test
     public void shouldSaveOneItem() {
         repository.save(book);
